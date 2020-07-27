@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f0f0f0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+		Ubuntu, Cantarell, 'Helvetica', sans-serif;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.floating-label {
+	position: relative;
+	margin-bottom: 20px;
+}
+.floating-input,
+.floating-select {
+	font-size: 14px;
+	padding: 4px 4px;
+	display: block;
+	width: 100%;
+	height: 30px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #757575;
+	font-size: 18px;
+}
+
+.floating-input:focus,
+.floating-select:focus {
+	outline: none;
+	border-bottom: 2px solid #5264ae;
+}
+
+label {
+	color: #999;
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 0px;
+	top: 5px;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+.floating-input:focus ~ label,
+.floating-input:not(:placeholder-shown) ~ label {
+	top: -18px;
+	font-size: 14px;
+	color: #5264ae;
+}
+
+.floating-input:focus ~ .bar:before,
+.floating-input:focus ~ .bar:after,
+.floating-select:focus ~ .bar:before,
+.floating-select:focus ~ .bar:after {
+	width: 50%;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
